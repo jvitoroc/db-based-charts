@@ -1,7 +1,11 @@
 package com;
 
+import com.chart.BaseExtendedChart;
 import com.chart.ExtendedPieChart;
+import com.chart.ExtendedXYChart;
 import com.data.*;
+import com.data.pie.PieDataSourceDefaultDataModel;
+import com.data.xy.XYDataSourceDefaultDataModel;
 import org.knowm.xchart.*;
 
 
@@ -31,12 +35,10 @@ public class Form {
     String url = null;
 
     public static void main(String[] args) throws Exception {
-        MySQLConnection sql = new MySQLConnection("sql10.freemysqlhosting.net", "3306", "sql10263893", "5HeWyCNGdT");
-        PieDataSource pds = new PieDataSource(sql, "t_Data", null, "sql10263893");
-        ExtendedPieChart pieChart = new ExtendedPieChart(pds, "123");
-        StringWriter sw = new StringWriter();
+        BaseConnection sql = new SQLServerConnection("localhost", "1433", "sa", "123lol123", "sqlserver");
+        XYDataSource pds = new XYDataSourceDefaultDataModel("xy", "dbo", "db", sql);
+        BaseExtendedChart pieChart = new ExtendedXYChart(pds, "123");
 
-        String xmlString = sw.toString();
         pieChart.showChart();
         //Form a = new Form();
     }

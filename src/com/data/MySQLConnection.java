@@ -19,9 +19,4 @@ public class MySQLConnection extends BaseConnection {
                 this.pass
         );
     }
-
-    @Override
-    protected ResultSet executeQuery(String query, String schema, String catalog) throws Exception {
-        return super.executeQuery(query, schema, catalog);
-    }
 }

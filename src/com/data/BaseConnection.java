@@ -23,6 +23,7 @@ public abstract class BaseConnection {
 
     protected ResultSet executeQuery(String query, String schema, String catalog) throws Exception {
         java.sql.Connection conn = getConnection();
+
         conn.setCatalog(catalog);
         conn.setSchema(schema);
         Statement s = conn.createStatement();

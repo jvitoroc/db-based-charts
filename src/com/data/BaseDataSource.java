@@ -1,7 +1,6 @@
 package com.data;
 
 import java.sql.*;
-import java.util.HashMap;
 
 public abstract class BaseDataSource{
 
@@ -10,11 +9,11 @@ public abstract class BaseDataSource{
     protected String catalog;
     protected BaseConnection baseConnection;
 
-    protected BaseDataSource(BaseConnection baseConnection, String dataSource, String schema, String catalog){
+    public BaseDataSource(String dataSource, String schema, String catalog, BaseConnection baseConnection) {
         this.dataSource = dataSource;
-        this.baseConnection = baseConnection;
         this.schema = schema;
         this.catalog = catalog;
+        this.baseConnection = baseConnection;
     }
 
     protected ResultSet getRawData() throws Exception {
@@ -24,6 +23,22 @@ public abstract class BaseDataSource{
                 .catalog(catalog)
                 .select(dataSource)
                 .execute();
+    }
+
+    public String getSchema() {
+        return schema;
+    }
+
+    public void setSchema(String schema) {
+        this.schema = schema;
+    }
+
+    public String getCatalog() {
+        return catalog;
+    }
+
+    public void setCatalog(String catalog) {
+        this.catalog = catalog;
     }
 
     protected BaseConnection getBaseConnection() {

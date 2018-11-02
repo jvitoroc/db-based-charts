@@ -1,26 +1,20 @@
 package com.data;
 
-import com.data.types.IPieDataModel;
-import com.data.types.PieDefaultDataModel;
-
 import java.sql.ResultSet;
+import java.util.HashMap;
 
-public class PieDataSource extends BaseDataSource  {
+public abstract class PieDataSource extends BaseDataSource  {
 
-    public PieDataSource(BaseConnection baseConnection, String dataSource, String schema, String catalog) {
-        super(baseConnection, dataSource, schema, catalog);
+    public PieDataSource(String dataSource, String schema, String catalog, BaseConnection baseConnection) {
+        super(dataSource, schema, catalog, baseConnection);
     }
 
-    public <T extends IPieDataModel> T getConsolidatedData(Class<T> type) throws Exception {
+    public HashMap<String, Number> getConsolidatedData() throws Exception {
         ResultSet rs = super.getRawData();
-        if(type == PieDefaultDataModel.class){
-            PieDefaultDataModel data = new PieDefaultDataModel();
-            while(rs.next()){
-                data.put(rs.getString(1), rs.getFloat(2));
-            }
-            return (T)data;
+        HashMap<String, Number> data = new HashMap<String, Number>();
+        while(rs.next()){
+            data.put(rs.getString(1), rs.getFloat(2));
         }
-        return null;
+        return data;
     }
-
 }
