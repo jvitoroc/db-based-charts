@@ -1,5 +1,6 @@
 package com.chart;
 import com.data.BaseDataSource;
+import com.data.types.BaseDataModel;
 import org.knowm.xchart.internal.chartpart.Chart;
 
 public abstract class BaseExtendedChart<T extends Chart, DT extends BaseDataSource> {

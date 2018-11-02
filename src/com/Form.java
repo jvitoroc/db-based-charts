@@ -2,6 +2,7 @@ package com;
 
 import com.chart.ExtendedPieChart;
 import com.data.*;
+import com.data.types.PieDefaultDataModel;
 import org.knowm.xchart.*;
 
 
@@ -32,11 +33,8 @@ public class Form {
 
     public static void main(String[] args) throws Exception {
         MySQLConnection sql = new MySQLConnection("sql10.freemysqlhosting.net", "3306", "sql10263893", "5HeWyCNGdT");
-        PieDataSource pds = new PieDataSource(sql, "t_Data", null, "sql10263893");
+        PieDataSource<PieDefaultDataModel> pds = new PieDataSource<PieDefaultDataModel>(sql, "t_Data", null, "sql10263893");
         ExtendedPieChart pieChart = new ExtendedPieChart(pds, "123");
-        StringWriter sw = new StringWriter();
-
-        String xmlString = sw.toString();
         pieChart.showChart();
         //Form a = new Form();
     }
