@@ -48,8 +48,8 @@ public class Query {
             columnsString = columnsString.substring(0, columnsString.length()-2);
         }else
             columnsString = "*";
-        // SELECT %s from %s
-        String query = String.format("exec xy",
+        
+        String query = String.format("SELECT %s from %s",
                 columnsString,
                 dataSource
         );
