@@ -1,19 +1,23 @@
 package com.data;
 
-import java.sql.*;
+import com.data.utils.Query;
 
-public abstract class BaseDataSource{
+import java.sql.ResultSet;
+
+public abstract class BaseDataSource<C, M extends Enum> {
 
     protected String dataSource;
     protected String schema;
     protected String catalog;
     protected BaseConnection baseConnection;
+    protected M dataModel;
 
-    public BaseDataSource(String dataSource, String schema, String catalog, BaseConnection baseConnection) {
+    public BaseDataSource(String dataSource, String schema, String catalog, BaseConnection baseConnection, M dataModel) {
         this.dataSource = dataSource;
         this.schema = schema;
         this.catalog = catalog;
         this.baseConnection = baseConnection;
+        this.dataModel = dataModel;
     }
 
     protected ResultSet getRawData() throws Exception {
@@ -23,6 +27,16 @@ public abstract class BaseDataSource{
                 .catalog(catalog)
                 .select(dataSource)
                 .execute();
+    }
+
+    public abstract void populateChart(C chart) throws Exception;
+
+    public M getDataModel() {
+        return dataModel;
+    }
+
+    public void setDataModel(M dataModel) {
+        this.dataModel = dataModel;
     }
 
     public String getSchema() {

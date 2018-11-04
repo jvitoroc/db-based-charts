@@ -1,23 +1,23 @@
 package com;
 
-import com.chart.BaseExtendedChart;
-import com.chart.ExtendedPieChart;
-import com.chart.ExtendedXYChart;
-import com.data.*;
-import com.data.pie.PieDataSourceDefaultDataModel;
-import com.data.xy.XYDataSourceDefaultDataModel;
-import org.knowm.xchart.*;
-
+import com.visualization.BaseExtendedChart;
+import com.visualization.chart.ExtendedXYChart;
+import com.data.BaseConnection;
+import com.data.connection.SQLServerConnection;
+import com.data.model.XYDataModel;
+import com.data.source.XYDataSource;
+import org.knowm.xchart.PieChart;
+import org.knowm.xchart.PieChartBuilder;
+import org.knowm.xchart.SwingWrapper;
 
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.StringWriter;
 import java.sql.*;
 
 public class Form {
+    String url = null;
     private JTextField txtHost;
     private JTextField txtInstance;
     private JTextField txtPort;
@@ -32,16 +32,7 @@ public class Form {
     private JComboBox cbxNameColumn;
     private JComboBox cbxDataColumn;
     private JButton showPieChartButton;
-    String url = null;
 
-    public static void main(String[] args) throws Exception {
-        BaseConnection sql = new SQLServerConnection("localhost", "1433", "sa", "123lol123", "sqlserver");
-        XYDataSource pds = new XYDataSourceDefaultDataModel("xy", "dbo", "db", sql);
-        BaseExtendedChart pieChart = new ExtendedXYChart(pds, "123");
-
-        pieChart.showChart();
-        //Form a = new Form();
-    }
     public Form() {
 
 
@@ -87,24 +78,33 @@ public class Form {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                    Thread t = new Thread(new Runnable() {
-                        @Override
-                        public void run() {
-                            try {
-                                Form.showPie(that);
-                            }catch(Exception a){
+                Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Form.showPie(that);
+                        } catch (Exception a) {
 
-                            }
                         }
+                    }
 
-                    });
-                    t.start();
+                });
+                t.start();
             }
 
         });
     }
 
-    public static void showPie(Form a) throws Exception{
+    public static void main(String[] args) throws Exception {
+        BaseConnection sql = new SQLServerConnection("localhost", "1433", "sa", "123lol123", "sqlserver");
+        XYDataSource pds = new XYDataSource("t_xy", "dbo", "db", sql, XYDataModel.Default);
+        BaseExtendedChart pieChart = new ExtendedXYChart(pds, "123");
+
+        pieChart.showChart();
+        //Form a = new Form();
+    }
+
+    public static void showPie(Form a) throws Exception {
         PieChart pc = a.getChart();
         new SwingWrapper(pc).displayChart();
     }
@@ -149,22 +149,22 @@ public class Form {
         PieChart chart = new PieChartBuilder().width(800).height(600).title(getClass().getSimpleName()).build();
 
         // Customize BaseExtendedChart
-        Color[] sliceColors = new Color[] { new Color(224, 68, 14), new Color(230, 105, 62), new Color(236, 143, 110), new Color(243, 180, 159), new Color(246, 199, 182) };
+        Color[] sliceColors = new Color[]{new Color(224, 68, 14), new Color(230, 105, 62), new Color(236, 143, 110), new Color(243, 180, 159), new Color(246, 199, 182)};
         chart.getStyler().setSeriesColors(sliceColors);
         ResultSet rs = getPieData(url, cbxNameColumn.getSelectedItem().toString(), cbxDataColumn.getSelectedItem().toString());
-        while(rs.next()) {
+        while (rs.next()) {
             chart.addSeries(rs.getString("nameColumn"), rs.getFloat("dataColumn"));
         }
 
         return chart;
     }
 
-    public ResultSet getPieData(String url, String nameColumn, String dataColumn) throws Exception{
+    public ResultSet getPieData(String url, String nameColumn, String dataColumn) throws Exception {
         String query = String.format("SELECT %s as nameColumn, %s as dataColumn from %s",
                 nameColumn,
                 dataColumn,
                 cbxDataSource.getSelectedItem().toString()
-                );
+        );
         Connection con = DriverManager.getConnection(url);
         Statement s = con.createStatement();
         return s.executeQuery(query);

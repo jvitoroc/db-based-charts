@@ -21,7 +21,7 @@ public abstract class BaseConnection {
 
     protected abstract String getConnectionUrl();
 
-    protected ResultSet executeQuery(String query, String schema, String catalog) throws Exception {
+    public ResultSet executeQuery(String query, String schema, String catalog) throws Exception {
         java.sql.Connection conn = getConnection();
 
         conn.setCatalog(catalog);
@@ -32,13 +32,13 @@ public abstract class BaseConnection {
 
     public Exception testConnection() throws Exception {
         java.sql.Connection conn = null;
-        try{
+        try {
             conn = getConnection();
             return null;
-        }catch (Exception e){
+        } catch (Exception e) {
             return e;
-        }finally {
-            if(conn != null && !conn.isClosed())
+        } finally {
+            if (conn != null && !conn.isClosed())
                 conn.close();
         }
     }
@@ -56,12 +56,12 @@ public abstract class BaseConnection {
         String[] types = {"TABLE", "VIEW"};
         ResultSet trs = databaseMetaData.getTables(database, schema, null, types);
 
-        while(prs.next()){
-            dataSources.add(new AbstractMap.SimpleEntry<> ("p", prs.getString("PROCEDURE_NAME")));
+        while (prs.next()) {
+            dataSources.add(new AbstractMap.SimpleEntry<>("p", prs.getString("PROCEDURE_NAME")));
         }
 
-        while (trs.next()){
-            dataSources.add(new AbstractMap.SimpleEntry<> ("t", trs.getString("TABLE_NAME")));
+        while (trs.next()) {
+            dataSources.add(new AbstractMap.SimpleEntry<>("t", trs.getString("TABLE_NAME")));
         }
 
         return dataSources;
