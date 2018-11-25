@@ -20,7 +20,7 @@ public class PieDataSource extends BaseDataSource<PieChart, PieDataModel> {
         if (dataModel == PieDataModel.Default) {
             HashMap<String, Number> data = new HashMap<String, Number>();
             while (rs.next()) {
-                data.put(rs.getString(1), rs.getFloat(2));
+                data.put(rs.getString(1), rs.getDouble(2));
             }
             data.forEach((k, v) -> chart.addSeries(k, v));
             rs.close();

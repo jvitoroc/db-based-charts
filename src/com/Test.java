@@ -16,11 +16,11 @@ public class Test {
     public static void main(String[] args) throws Exception {
         BaseConnection sql = new SQLServerConnection("localhost", "1433", "sa", "123lol123", "sqlserver");
 
-        BaseDataSource xys = new XYDataSource("t_XY_Float_Float", "dbo", "db", sql, XYDataModel.Default);
-        BaseDataSource pds = new PieDataSource("t_XY_Float_Float", "dbo", "db", sql, PieDataModel.Default);
+        XYDataSource xys = new XYDataSource("t_XY_Date_Float", "dbo", "db", sql, XYDataModel.Default);
+        PieDataSource pds = new PieDataSource("t_XY_Float_Float", "dbo", "db", sql, PieDataModel.Default);
 
-        BaseExtendedChart xyChart = new ExtendedXYChart((XYDataSource)xys, "XY");
-        BaseExtendedChart pieChat = new ExtendedPieChart((PieDataSource)pds, "Pie");
+        BaseExtendedChart xyChart = new ExtendedXYChart(xys, "XY");
+        BaseExtendedChart pieChat = new ExtendedPieChart(pds, "Pie");
 
         xyChart.showChart();
         pieChat.showChart();
