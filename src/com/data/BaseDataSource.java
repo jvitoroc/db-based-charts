@@ -1,8 +1,10 @@
 package com.data;
 
+import com.data.source.DataSourceType;
 import com.data.utils.Query;
 
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 
 public abstract class BaseDataSource<C, M extends Enum> {
 
@@ -11,13 +13,23 @@ public abstract class BaseDataSource<C, M extends Enum> {
     protected String catalog;
     protected BaseConnection baseConnection;
     protected M dataModel;
+    protected DataSourceType type;
 
-    public BaseDataSource(String dataSource, String schema, String catalog, BaseConnection baseConnection, M dataModel) {
+    public BaseDataSource(String dataSource, String schema, String catalog, BaseConnection baseConnection, M dataModel, DataSourceType type) {
         this.dataSource = dataSource;
         this.schema = schema;
         this.catalog = catalog;
         this.baseConnection = baseConnection;
         this.dataModel = dataModel;
+        this.type = type;
+    }
+
+    public BaseDataSource(String dataSource, String schema, String catalog, BaseConnection baseConnection, DataSourceType type) {
+        this.dataSource = dataSource;
+        this.schema = schema;
+        this.catalog = catalog;
+        this.baseConnection = baseConnection;
+        this.type = type;
     }
 
     protected ResultSet getRawData() throws Exception {
@@ -55,19 +67,19 @@ public abstract class BaseDataSource<C, M extends Enum> {
         this.catalog = catalog;
     }
 
-    protected BaseConnection getBaseConnection() {
+    public BaseConnection getBaseConnection() {
         return baseConnection;
     }
 
-    protected void setBaseConnection(BaseConnection baseConnection) {
+    public void setBaseConnection(BaseConnection baseConnection) {
         this.baseConnection = baseConnection;
     }
 
-    protected String getDataSource() {
+    public String getDataSource() {
         return dataSource;
     }
 
-    protected void setDataSource(String dataSource) {
+    public void setDataSource(String dataSource) {
         this.dataSource = dataSource;
     }
 }

@@ -27,6 +27,7 @@ public class ExtendedXYChart extends BaseExtendedChart<XYChart, XYDataSource> {
 
         Color[] sliceColors = new Color[]{new Color(224, 68, 14), new Color(0, 105, 62), new Color(236, 143, 110), new Color(243, 180, 159), new Color(246, 199, 182)};
         chart.getStyler().setSeriesColors(sliceColors);
+        chart.getStyler().setDatePattern("dd.MM.yyyy");
         this.dataSource.populateChart(chart);
         return chart;
     }

@@ -1,5 +1,7 @@
 package com;
 
+import com.data.source.DataSourceType;
+import com.data.source.GenericDataSource;
 import com.visualization.BaseExtendedChart;
 import com.visualization.chart.ExtendedXYChart;
 import com.data.BaseConnection;
@@ -15,6 +17,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class Form {
     String url = null;
@@ -33,140 +36,61 @@ public class Form {
     private JComboBox cbxDataColumn;
     private JButton showPieChartButton;
 
-    public Form() {
+    BaseConnection sql;
+    XYDataSource pds;
+    BaseExtendedChart pieChart;
 
+    public Form() throws Exception {
+        BaseConnection sql = new SQLServerConnection("localhost", "1433", "sa", "123lol123", "sqlserver");
+        XYDataSource pds = new XYDataSource("t_xy_Date_float", "dbo", "db", sql, XYDataModel.Default, DataSourceType.Procedure);
+        BaseExtendedChart pieChart = new ExtendedXYChart(pds, "123");
+        pieChart.showChart();
 
-        ActionListener al = new ActionListener() {
+//        JFrame janela = new JFrame("Argentum");
+//        janela.add(panel);
+//        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        janela.pack();
+//        janela.setVisible(true);
+
+        button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     listDataSource();
-                } catch (Exception a) {
+                }catch(Exception ae){
 
                 }
             }
-        };
-
-        JFrame janela = new JFrame("Argentum");
-        janela.add(panel);
-        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        janela.pack();
-        janela.setVisible(true);
-        button1.addActionListener(al);
-        cbxDataSource.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    Connection con = DriverManager.getConnection(url);
-                    DatabaseMetaData dbmd = con.getMetaData();
-                    ResultSet rs = dbmd.getColumns(txtDb.getText(), txtSchema.getText(), cbxDataSource.getSelectedItem().toString(), null);
-                    cbxNameColumn.removeAllItems();
-                    cbxDataColumn.removeAllItems();
-                    while (rs.next()) {
-
-                        cbxDataColumn.addItem(rs.getString("COLUMN_NAME"));
-                        cbxNameColumn.addItem(rs.getString("COLUMN_NAME"));
-                    }
-                } catch (SQLException a) {
-                    a.printStackTrace();
-                }
-            }
-        });
-        final Form that = this;
-        showPieChartButton.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                Thread t = new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            Form.showPie(that);
-                        } catch (Exception a) {
-
-                        }
-                    }
-
-                });
-                t.start();
-            }
-
         });
     }
 
     public static void main(String[] args) throws Exception {
-        BaseConnection sql = new SQLServerConnection("localhost", "1433", "sa", "123lol123", "sqlserver");
-        XYDataSource pds = new XYDataSource("t_xy", "dbo", "db", sql, XYDataModel.Default);
-        BaseExtendedChart pieChart = new ExtendedXYChart(pds, "123");
-
-        pieChart.showChart();
-        //Form a = new Form();
-    }
-
-    public static void showPie(Form a) throws Exception {
-        PieChart pc = a.getChart();
-        new SwingWrapper(pc).displayChart();
+        Form a = new Form();
     }
 
     public void listDataSource() throws Exception {
         if ((txtHost.getText().length() > 0 &&
                 txtInstance.getText().length() > 0 &&
-                txtPort.getText().length() > 0 &&
-                txtSchema.getText().length() > 0 &&
                 txtDb.getText().length() > 0 &&
+                txtSchema.getText().length() > 0 &&
+                txtPort.getText().length() > 0 &&
                 txtUser.getText().length() > 0 &&
                 txtPass.getText().length() > 0)) {
 
-            String url = String.format("jdbc:sqlserver://%s\\%s:%s;user=%s;password=%s",
+
+            sql = new SQLServerConnection(
                     txtHost.getText(),
-                    txtInstance.getText(),
                     txtPort.getText(),
-                    //txtDb.getText(),
                     txtUser.getText(),
-                    txtPass.getText()
-            );
+                    txtPass.getText(),
+                    txtInstance.getText());
 
-            Connection con = DriverManager.getConnection(url);
-            this.url = url;
-            try {
+            ArrayList<GenericDataSource> ds = sql.getDataSources(txtDb.getText(), txtSchema.getText());
 
-                DatabaseMetaData dbmd = con.getMetaData();
-                String[] types = {"TABLE", "VIEW"};
-                ResultSet rs = dbmd.getTables("db", "dbo", "%", types);
-                while (rs.next()) {
-                    cbxDataSource.addItem(rs.getString("TABLE_NAME"));
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
+            for(GenericDataSource gds: ds){
+                cbxDataSource.addItem(gds.getDataSource());
             }
+
         }
-    }
-
-    public PieChart getChart() throws Exception {
-
-        // Create BaseExtendedChart
-        PieChart chart = new PieChartBuilder().width(800).height(600).title(getClass().getSimpleName()).build();
-
-        // Customize BaseExtendedChart
-        Color[] sliceColors = new Color[]{new Color(224, 68, 14), new Color(230, 105, 62), new Color(236, 143, 110), new Color(243, 180, 159), new Color(246, 199, 182)};
-        chart.getStyler().setSeriesColors(sliceColors);
-        ResultSet rs = getPieData(url, cbxNameColumn.getSelectedItem().toString(), cbxDataColumn.getSelectedItem().toString());
-        while (rs.next()) {
-            chart.addSeries(rs.getString("nameColumn"), rs.getFloat("dataColumn"));
-        }
-
-        return chart;
-    }
-
-    public ResultSet getPieData(String url, String nameColumn, String dataColumn) throws Exception {
-        String query = String.format("SELECT %s as nameColumn, %s as dataColumn from %s",
-                nameColumn,
-                dataColumn,
-                cbxDataSource.getSelectedItem().toString()
-        );
-        Connection con = DriverManager.getConnection(url);
-        Statement s = con.createStatement();
-        return s.executeQuery(query);
     }
 }

@@ -2,51 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2875ca-bc3b-4a4c-80d5-5a968c9f01df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/data/source/PieDataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/data/source/XYDataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/visualization/chart/ExtendedXYChart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Condition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/joao.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/data/model/BaseDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/data/model/_XYDataModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/data/source/DataSourceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/data/source/GenericDataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/Form$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/Form$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/Form$3$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/Form$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form$3$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form$3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/com/Form.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/Form.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/chart/BaseExtendedChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/chart/ExtendedPieChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/chart/ExtendedXYChart$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/chart/ExtendedXYChart.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/BaseConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/data/BaseConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/BaseDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/data/BaseDataSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/IDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/MySQLConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/PieDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/Query.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/SQLServerConnection.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/XYDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/pie/PieDataSourceDefaultDataModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/types/IPieDefaultDataModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/types/IXYDefaultDataModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/xy/XY.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/xy/XYDataSourceDefaultDataModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/source/PieDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/data/source/PieDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/source/XYDataSource$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/data/source/XYDataSource$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/data/source/XYDataSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/data/source/XYDataSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Swing/com/visualization/chart/ExtendedXYChart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Swing/com/visualization/chart/ExtendedXYChart.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chart/BaseExtendedChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/visualization/BaseExtendedChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chart/ExtendedPieChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/visualization/chart/ExtendedPieChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/chart/ExtendedXYChart.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/data/BaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/BaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/data/BaseDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/BaseDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/IDataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/MySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/connection/MySQLConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/PieDataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/utils/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/SQLServerConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/connection/SQLServerConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/XYDataSource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/pie/PieDataSourceDefaultDataModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/types/IPieDefaultDataModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/types/IXYDefaultDataModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/xy/XY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/utils/XY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/data/xy/XYDataSourceDefaultDataModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/data/source/PieDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/source/PieDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/data/source/XYDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/source/XYDataSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/data/utils/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/utils/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/data/utils/XY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/data/utils/XY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/visualization/chart/ExtendedXYChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/visualization/chart/ExtendedXYChart.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,41 +39,44 @@
     <session id="-1404380299">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.101" value="1" />
           <entry key="project.open.time.106" value="1" />
+          <entry key="project.open.time.107" value="1" />
           <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.133" value="1" />
+          <entry key="project.open.time.188" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.97" value="2" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="7" />
-          <entry key="form" value="11" />
+          <entry key="class" value="9" />
+          <entry key="form" value="12" />
           <entry key="iml" value="2" />
-          <entry key="java" value="205" />
+          <entry key="java" value="276" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="7" />
-          <entry key="GUI_DESIGNER_FORM" value="11" />
+          <entry key="CLASS" value="9" />
+          <entry key="GUI_DESIGNER_FORM" value="12" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="205" />
+          <entry key="JAVA" value="276" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="100" />
-          <entry key="java" value="11964" />
+          <entry key="dummy" value="115" />
+          <entry key="java" value="15611" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11964" />
-          <entry key="PLAIN_TEXT" value="100" />
+          <entry key="JAVA" value="15611" />
+          <entry key="PLAIN_TEXT" value="115" />
         </counts>
       </usages-collector>
     </session>
@@ -101,10 +84,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/Form.java">
+        <entry file="file://$PROJECT_DIR$/src/com/data/source/XYDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="102" column="26" lean-forward="true" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+            <state relative-caret-position="319">
+              <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/data/utils/XY.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/data/utils/Query.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/data/model/_XYDataModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/data/model/XYDataModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/visualization/chart/ExtendedPieChart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/data/BaseConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,8 +165,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/data/source/PieDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="272">
+              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,10 +175,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/data/source/XYDataSource.java">
+        <entry file="file://$PROJECT_DIR$/src/com/visualization/chart/ExtendedXYChart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="357">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/data/source/GenericDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,11 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Form.form" />
-        <option value="$PROJECT_DIR$/src/JDBCUrl.java" />
-        <option value="$PROJECT_DIR$/src/com/chart/Connection.java" />
-        <option value="$PROJECT_DIR$/src/com/chart/Query.java" />
         <option value="$PROJECT_DIR$/src/Form.java" />
         <option value="$PROJECT_DIR$/src/com/chart/DataSource.java" />
         <option value="$PROJECT_DIR$/src/com/data/Connection.java" />
@@ -191,16 +248,24 @@
         <option value="$PROJECT_DIR$/src/com/data/models/XYDataModel.java" />
         <option value="$PROJECT_DIR$/src/com/chart/ExtendedPieChart.java" />
         <option value="$PROJECT_DIR$/src/com/chart/ExtendedXYChart.java" />
-        <option value="$PROJECT_DIR$/src/com/data/utils/XY.java" />
         <option value="$PROJECT_DIR$/src/com/data/XYDataSource.java" />
-        <option value="$PROJECT_DIR$/src/com/data/BaseDataSource.java" />
-        <option value="$PROJECT_DIR$/src/com/data/BaseConnection.java" />
         <option value="$PROJECT_DIR$/src/com/chart/BaseExtendedChart.java" />
-        <option value="$PROJECT_DIR$/src/com/Form.java" />
-        <option value="$PROJECT_DIR$/src/com/data/utils/Query.java" />
-        <option value="$PROJECT_DIR$/src/com/data/source/PieDataSource.java" />
-        <option value="$PROJECT_DIR$/src/com/data/source/XYDataSource.java" />
         <option value="$PROJECT_DIR$/src/test/Condition.java" />
+        <option value="$PROJECT_DIR$/src/com/data/source/low/DataSourceType.java" />
+        <option value="$PROJECT_DIR$/src/com/data/source/low/DataSource.java" />
+        <option value="$PROJECT_DIR$/src/com/data/source/GenericDataSource.java" />
+        <option value="$PROJECT_DIR$/src/com/data/source/PieDataSource.java" />
+        <option value="$PROJECT_DIR$/src/com/Form.java" />
+        <option value="$PROJECT_DIR$/src/com/visualization/chart/ExtendedPieChart.java" />
+        <option value="$PROJECT_DIR$/src/com/visualization/chart/ExtendedXYChart.java" />
+        <option value="$PROJECT_DIR$/src/com/data/BaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/com/data/BaseDataSource.java" />
+        <option value="$PROJECT_DIR$/src/com/data/utils/Query.java" />
+        <option value="$PROJECT_DIR$/src/com/data/model/BaseDataModel.java" />
+        <option value="$PROJECT_DIR$/src/com/data/model/_PieDataModel.java" />
+        <option value="$PROJECT_DIR$/src/com/data/utils/XY.java" />
+        <option value="$PROJECT_DIR$/src/com/data/model/_XYDataModel.java" />
+        <option value="$PROJECT_DIR$/src/com/data/source/XYDataSource.java" />
       </list>
     </option>
   </component>
@@ -222,8 +287,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,7 +310,46 @@
               <item name="Swing" type="b2602c69:ProjectViewProjectNode" />
               <item name="Swing" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Swing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Swing" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Swing" type="b2602c69:ProjectViewProjectNode" />
@@ -271,13 +375,13 @@
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="193" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="249" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541361136542" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543172172452" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/mysql-connector-java-8.0.13" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -346,7 +450,7 @@
     <frame x="-8" y="-8" width="1040" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49886104" visible="true" weight="0.27040815" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49886104" visible="true" weight="0.22142857" />
       <window_info id="Structure" order="1" sideWeight="0.5011389" side_tool="true" weight="0.2682927" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -355,15 +459,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32874617" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33770493" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39908257" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33770493" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32874617" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32786885" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -467,92 +571,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/chart/ExtendedChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/DataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/pie/PieDataSourceDefaultDataModel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/chart/ExtendedChart.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/DataSource.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/pie/PieDataSourceDefaultDataModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/types/IPieDefaultDataModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/types/IXYDefaultDataModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/xy/XYDataSourceDefaultDataModel.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/IDataSource.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/connection/MySQLConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/types/IPieDefaultDataModel.java">
+    <entry file="file://$PROJECT_DIR$/src/test/Model.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/Condition.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/data/source/low/DataSource.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/Form.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="jar://$USER_HOME$/Documents/eae/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre8.jar!/com/microsoft/sqlserver/jdbc/SQLServerResultSet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="74" />
+        <state relative-caret-position="123">
+          <caret line="648" selection-start-line="648" selection-end-line="648" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/types/IXYDefaultDataModel.java">
+    <entry file="jar://$USER_HOME$/Documents/eae/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre8.jar!/com/microsoft/sqlserver/jdbc/SQLServerDriver.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="100">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/xy/XYDataSourceDefaultDataModel.java">
+    <entry file="file://$PROJECT_DIR$/src/com/data/source/DataSourceType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/IDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/model/XYDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/utils/XY.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/data/connection/SQLServerConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="293">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/connection/MySQLConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/com/data/BaseDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="40" column="27" lean-forward="true" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/data/model/BaseDataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -563,23 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/BaseDataSource.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Form.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-          <folding>
-            <element signature="e#961#962#0" expanded="true" />
-            <element signature="e#993#994#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
-            <element signature="e#1080#1081#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/visualization/chart/ExtendedXYChart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        <state relative-caret-position="510">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -588,8 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/visualization/BaseExtendedChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -598,17 +662,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/visualization/chart/ExtendedPieChart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="51" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/data/BaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/data/source/PieDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/visualization/chart/ExtendedXYChart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/data/source/GenericDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/data/model/XYDataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11/lib/src.zip!/java.sql/java/sql/Types.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="250" column="17" lean-forward="true" selection-start-line="250" selection-start-column="17" selection-end-line="250" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/data/utils/Query.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
+        <state relative-caret-position="194">
           <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -616,10 +731,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/BaseConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/com/data/utils/XY.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+        <state relative-caret-position="255">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/data/model/_XYDataModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="23" column="46" lean-forward="true" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -628,45 +754,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/data/source/XYDataSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Form.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/data/source/PieDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Condition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Form.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="102" column="26" lean-forward="true" selection-start-line="102" selection-start-column="26" selection-end-line="102" selection-end-column="26" />
+        <state relative-caret-position="319">
+          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,7 +1,9 @@
 package com.data;
 
+import com.data.source.DataSourceType;
+import com.data.source.GenericDataSource;
+
 import java.sql.*;
-import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,25 +45,33 @@ public abstract class BaseConnection {
         }
     }
 
-    private Connection getConnection() throws Exception {
+    public Connection getConnection() throws Exception {
         return DriverManager.getConnection(getConnectionUrl());
     }
 
-    public List<AbstractMap.SimpleEntry<String, String>> getDataSources(String database, String schema) throws Exception {
-        List<AbstractMap.SimpleEntry<String, String>> dataSources = new ArrayList<>();
+    public ArrayList<GenericDataSource> getDataSources(String database, String schema) throws Exception {
+        ArrayList<GenericDataSource> dataSources = new ArrayList<>();
 
         Connection conn = getConnection();
         DatabaseMetaData databaseMetaData = conn.getMetaData();
+
         ResultSet prs = databaseMetaData.getProcedures(database, schema, null);
-        String[] types = {"TABLE", "VIEW"};
-        ResultSet trs = databaseMetaData.getTables(database, schema, null, types);
+        ResultSet trs = databaseMetaData.getTables(database, schema, null, new String[]{"TABLE"});
+        ResultSet vrs = databaseMetaData.getTables(database, schema, null, new String[]{"VIEW"});
 
         while (prs.next()) {
-            dataSources.add(new AbstractMap.SimpleEntry<>("p", prs.getString("PROCEDURE_NAME")));
+            GenericDataSource ds = new GenericDataSource(DataSourceType.Procedure, prs.getString("PROCEDURE_NAME"), database, schema, this);
+            dataSources.add(ds);
         }
 
         while (trs.next()) {
-            dataSources.add(new AbstractMap.SimpleEntry<>("t", trs.getString("TABLE_NAME")));
+            GenericDataSource ds = new GenericDataSource(DataSourceType.Table, trs.getString("TABLE_NAME"), database, schema, this);
+            dataSources.add(ds);
+        }
+
+        while (vrs.next()) {
+            GenericDataSource ds = new GenericDataSource(DataSourceType.View, vrs.getString("TABLE_NAME"), database, schema, this);
+            dataSources.add(ds);
         }
 
         return dataSources;

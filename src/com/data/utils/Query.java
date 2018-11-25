@@ -55,7 +55,6 @@ public class Query {
                 columnsString,
                 dataSource
         );
-
         return conn.executeQuery(query, schema, catalog);
     }
 }
